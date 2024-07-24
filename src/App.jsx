@@ -61,7 +61,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
           <Route path="/software" element={<Pricing />} />
-          <Route path="/login" element={<Login />} />
+          
+          {/*<Route path="/login" element={<Login />} />
           <Route path="/new" element={<New />} />
           <Route path="/authPage" element={<AuthPage />} />
           
@@ -76,7 +77,7 @@ const App = () => {
               <ClientPrivateRoute>
                 <ClientHome />
               </ClientPrivateRoute>
-              } />
+              } /> */}
 
           </Routes>
       </div>
