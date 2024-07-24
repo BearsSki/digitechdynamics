@@ -1,0 +1,37 @@
+.chat-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);  // Adjust to fit below the header
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-item {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.user-item:hover {
+  background-color: #e9ecef;
+}

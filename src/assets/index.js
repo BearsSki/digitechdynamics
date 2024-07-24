@@ -35,6 +35,11 @@ import photoshop from "./collaboration/photoshop.png";
 import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
+import react from "./collaboration/react.png";
+import python from "./collaboration/python.png";
+import gitHub from "./collaboration/gitHub.png";
+import excel from "./collaboration/excel.png";
+import wordPress from "./collaboration/wordPress.png";
 
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
@@ -144,4 +149,9 @@ export {
   instagram,
   telegram,
   twitter,
+  react,
+  python,
+  excel,
+  gitHub,
+  wordPress,
 };

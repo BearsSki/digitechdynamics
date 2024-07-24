@@ -1,0 +1,53 @@
+.pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 0.25rem solid transparent;
+    transform: translate(-50%, -50%);
+    animation: pulse 6s infinite;
+    filter: brightness(50%); /* Adjust this value to change brightness */
+  }
+  
+  .ring1 {
+    width: 65.875rem;
+    height: 65.875rem;
+    animation-delay: 0s;
+  }
+  
+  .ring2 {
+    width: 51.375rem;
+    height: 51.375rem;
+    animation-delay: 1s;
+  }
+  
+  .ring3 {
+    width: 36.125rem;
+    height: 36.125rem;
+    animation-delay: 2s;
+  }
+  
+  .ring4 {
+    width: 23.125rem;
+    height: 23.125rem;
+    animation-delay: 3s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      border-color: #dd734f;
+    }
+    25% {
+      border-color: #b9aedf;
+    }
+    50% {
+      border-color: #88e5be;
+    }
+    75% {
+      border-color: #1a1a32;
+    }
+    100% {
+      border-color: #dd734f;
+    }
+  }
+  

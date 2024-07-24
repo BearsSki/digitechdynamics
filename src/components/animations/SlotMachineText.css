@@ -1,0 +1,46 @@
+/* Define keyframes for the slot machine effect */
+@keyframes slotMachine {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* Define keyframes for resetting the position */
+@keyframes reset {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+/* Container for the text */
+.slot-machine-container {
+  display: inline-block;
+  overflow: hidden;
+  height: 3rem; /* Adjusted height to ensure visibility */
+  line-height: 3rem; /* Adjusted line-height to match the text size */
+  white-space: nowrap; /* Ensure text does not wrap */
+}
+
+/* Slot machine animation */
+.slot-machine {
+  display: inline-block;
+  animation: slotMachine 0.5s ease-in-out;
+}
+
+/* Slot machine animation initial state */
+.slot-machine.initial {
+  animation: slotMachine 0.5s ease-in-out;
+}
+
+/* Slot machine animation reset state */
+.slot-machine.reset {
+  animation: reset 0.5s ease-in-out;
+}
+
+/* Slot machine animation paused state */
+.slot-machine.paused {
+  animation: none; /* Use none instead of paused to ensure smooth transition */
+}
+
+/* Slot machine animation on hover */
+.slot-machine.hovered {
+  animation: slotMachine 0.5s ease-in-out;
+}

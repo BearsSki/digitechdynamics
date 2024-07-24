@@ -1,0 +1,43 @@
+.client-logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Set fixed width */
+  height: 200px; /* Set fixed height */
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #88e5be, #dd734f, #b9aedf, #1a1a32);
+  background-size: 400% 400%;
+  animation: gradient-rotate 5s ease infinite;
+  overflow: hidden;
+}
+
+.client-logo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Match the background to make it seamless */
+  border-radius: 50%;
+  overflow: hidden; /* Ensure anything outside the bounds is hidden */
+}
+
+.client-logo-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the image scales without distortion */
+}
+
+@keyframes gradient-rotate {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

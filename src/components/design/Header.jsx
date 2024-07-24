@@ -1,4 +1,5 @@
 import { background } from "../../assets";
+import DigiTechLogo from "../../assets/hero/DigiTechLogo.jpg";
 
 export const Rings = () => {
   return (
@@ -34,7 +35,7 @@ export const HamburgerMenu = () => {
       <div className="absolute inset-0 opacity-[.03]">
         <img
           className="w-full h-full object-cover"
-          src={background}
+          src={DigiTechLogo}
           width={688}
           height={953}
           alt="Background"
@@ -45,7 +46,6 @@ export const HamburgerMenu = () => {
 
       <SideLines />
 
-      <BackgroundCircles />
     </div>
   );
 };
