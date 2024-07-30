@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import ButtonSvg from "../assets/svg/ButtonSvg";
 
 const Button = ({ className, href, onClick, children, px, white, target, rel }) => {
@@ -13,12 +15,25 @@ const Button = ({ className, href, onClick, children, px, white, target, rel }) 
     </button>
   );
 
-  const renderLink = () => (
-    <a href={href} className={classes} target={target} rel={rel}>
-      <span className={spanClasses}>{children}</span>
-      {ButtonSvg(white)}
-    </a>
-  );
+  const renderLink = () => {
+    // Use Link for internal routing
+    if (href.startsWith('/')) {
+      return (
+        <Link to={href} className={classes} target={target} rel={rel}>
+          <span className={spanClasses}>{children}</span>
+          {ButtonSvg(white)}
+        </Link>
+      );
+    }
+
+    // Use <a> for external links
+    return (
+      <a href={href} className={classes} target={target} rel={rel}>
+        <span className={spanClasses}>{children}</span>
+        {ButtonSvg(white)}
+      </a>
+    );
+  };
 
   return href ? renderLink() : renderButton();
 };

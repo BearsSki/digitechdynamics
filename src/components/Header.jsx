@@ -1,16 +1,14 @@
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
 import { navigation } from "../constants";
-import Button from "./Button";
+import Button from "./Button"; // Ensure this is the correct path to your Button component
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
-
 import SlotMachineText from "./animations/SlotMachineText";
 
 const Header = () => {
-  const pathname = useLocation();
+  const location = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
@@ -37,9 +35,9 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8 text-3xl font-bold" href="/">
-          <SlotMachineText text="DigiTechDynamics" /> {/* Use SlotMachineText component */}
-        </a>
+        <Link className="block w-[12rem] xl:mr-8 text-3xl font-bold" to="/">
+          <SlotMachineText text="DigiTechDynamics" />
+        </Link>
 
         <nav
           className={`${
@@ -48,32 +46,31 @@ const Header = () => {
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.id}
-                href={item.url}
+                to={item.url}
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-3 py-4 md:py-6 lg:mr-2 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
+                  item.url === location.pathname ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
                 } lg:leading-5 lg:hover:text-n-1 xl:px-6`}
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
           </div>
 
           <HamburgerMenu />
         </nav>
 
-        <a
-          href="/software"
+        <Link
+          to="/software"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           Software Products
-        </a>
+        </Link>
+        
         <Button className="hidden lg:flex" href="/accounts">
           Accounts
         </Button>
