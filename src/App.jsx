@@ -23,6 +23,7 @@ import { ClientPrivateRoute } from './routes/ClientRoutes';
 import Projects from "./components/Projects/Projects";
 import "./style.css";
 import Team from "./components/Team";
+import AppDev from "./components/AppDev";
 
 const Home = () => {
   return (
@@ -48,7 +49,7 @@ const App = () => {
           <Route path="/previouswork" element={<PreviousWork />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/software" element={<Pricing />} />
+          <Route path="/software" element={<AppDev />} />
           <Route path="/login" element={<Login />} />
           <Route path="/new" element={<New />} />
           <Route path="/authPage" element={<AuthPage />} />

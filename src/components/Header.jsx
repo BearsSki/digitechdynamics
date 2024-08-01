@@ -68,7 +68,7 @@ const Header = () => {
           to="/software"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
-          Software Products
+          Our Apps
         </Link>
         
         <Button className="hidden lg:flex" href="/accounts">
